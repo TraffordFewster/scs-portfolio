@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafford's Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- My CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sideNav sideNavHide" id="sideNav">
+        <div id="popoutButton" class="popoutButton closed">
+            <span class="defaultT">T</span>
+            <span class="rightArrow fas fa-arrow-circle-right"></span>
+            <span class="leftArrow fas fa-arrow-circle-left"></span>
+        </div>
+        <div class="Initials">
+            <a href="/"><h1>T</h1></a>
+        </div>
+        <nav class="NavLinks">
+            <ul>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">My Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Coding Examples</a>
+                </li>
+                <li>
+                    <a href="#">SCS Scheme</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="ContactMeButton">
+            <a href="#">
+                Contact Me
+            </a>
+        </div>
+        <div class="SocialMedia">
+            <ul>
+                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script to handle sideNav Slide -->
+    <script>
+        const sideNav = document.getElementById("sideNav");
+        const sideButton = document.getElementById("popoutButton");
+        sideButton.onclick = function(){
+            sideButton.classList.toggle("expanded");
+            sideButton.classList.toggle("closed");
+            sideNav.classList.toggle("sideNavHide");
+        };
+    </script>
+
+    <div class="pageContainer">
+
+    </div>
+</body>
+</html>
