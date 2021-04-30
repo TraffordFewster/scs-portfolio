@@ -68,7 +68,7 @@
                 <h4>I'm a Web Developer</h4>
             </div>
             <div class="scrollDownPopup">
-                <a href="#">
+                <a href="#projectHolder">
                     <p>Scroll Down</p>
                     <i class="fas fa-chevron-down"></i>
                 </a>
@@ -78,7 +78,7 @@
             <div class="closeButton" id="projPopupClose">x</div>
             <img src="img/projPlaceholder.jpg" alt="Placeholder image" id="projPopupImg">
             <div class="TextHolder">
-                <h1 id="projPopupTitle">PLACEHOLDER_TITLE</h1>
+                <h1 id="projPopupTitle" class="title">PLACEHOLDER_TITLE</h1>
                 <p id="projPopupDesc">PLACEHOLDER_DESC</p>
             </div>
             <div class="LinkHolder">
@@ -93,7 +93,7 @@
             const projHolder = document.getElementById("projectHolder")
             const projects = [
                 {
-                    title: "Remake Netmatters.co.uk",
+                    title: "Remake Netmatters home page",
                     desc: "One of the first projects in the <a href='/scs.html'>Netmatters SCS Scheme</a> was to recreate the netmatters homepage to test what we had learn't in the <a href='https://teamtreehouse.com/'>Team Treehouse courses</a>.",
                     img: "https://cdn.tmonkeyt.dev/i/xq612.png",
                     github: "https://github.com/TraffordFewster/HTML---CSS-Reflection",
@@ -188,6 +188,46 @@
 
             projHolder.innerHTML = htmlStr;
         </script>
+        <footer>
+            <div class="footLeft">
+                <h1>Get in Touch</h1>
+                <p>Sed interdum est vel sollicitudin
+                    bibendum. Proin at accumsan nulla, non
+                    facilisis massa.</p>
+                <h2>00000 000000</h2>
+                <h2>info@netmatters.com</h2>
+                <p>Phasellus cursus urna in neque faucibus, eu
+                    dapibus magna vehicula. Sed tempus cursus
+                    mauris et scelerisque. Pellentesque ornare mi
+                    at fringilla egestas.
+                    </p>
+            </div>
+            <div class="footRight">
+                <form class="contactForm" action="">
+                    <fieldset>
+                        <input type="text" name="contact_fname" id="contact_fname" placeholder="First Name*">
+                        <input type="text" name="contact_lname" id="contact_lname" placeholder="Last Name*">
+                    </fieldset>
+                    <fieldset>
+                        <input type="email" name="contact_email" id="contact_email" placeholder="Email*">
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" name="contact_subject" id="contact_subject" placeholder="Subject*">
+                    </fieldset>
+                    <fieldset>
+                        <textarea name="paragraph_text" cols="50" rows="10" placeholder="Message"></textarea>
+                    </fieldset>
+                    
+                    <input type="submit" value="Submit" id="submitButton">
+                </form>
+            </div>
+            <div class="backToTopButton">
+                <a href="#">
+                    <i class="fas fa-chevron-up"></i>
+                    <p>Back To Top</p>
+                </a>
+            </div>
+        </footer>
     </div>
 
 </body>

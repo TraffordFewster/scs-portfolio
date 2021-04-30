@@ -38,7 +38,7 @@ header{
         animation-duration: 1s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
-        background: $sideNavBg;
+        //background: $sideNavBg;
         padding: $gutter/3;
         border-radius: 5px;
         a{
@@ -59,11 +59,11 @@ header{
 
 @keyframes scrollDownBounce {
     0%{
-        bottom:1rem;
+        bottom:2rem;
     }
 
     100%{
-        bottom: 2rem;
+        bottom: 1rem;
     }
     
 }

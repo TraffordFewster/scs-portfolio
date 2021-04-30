@@ -13,6 +13,10 @@ $accentColor: #64c864;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: $backgroundColor;
     font-family: 'Roboto', sans-serif;
@@ -36,7 +40,9 @@ body{
 
 
 
+
 @import '_sideNav.scss',
 '_header.scss',
 '_projects.scss',
-'_projectPopup.scss'
+'_projectPopup.scss',
+'_footer.scss'

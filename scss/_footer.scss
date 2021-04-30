@@ -1,0 +1,106 @@
+footer{
+    background: lighten($sideNavBg, 10);
+    display: flex;
+    color: whitesmoke;
+    padding-bottom: $gutter * 5;
+
+    .footLeft, .footRight{
+        display: block;
+        padding: $gutter * 2;
+    }
+
+    .footLeft{
+        width: 40%;
+        text-align: left;
+        p{
+            padding: $gutter 0;
+        }
+        h2{
+            word-break: break-all;
+        }
+    }
+    .footRight{
+        width: 60%;
+        padding: $gutter;
+    }
+
+    .contactForm{
+        fieldset{
+            display: flex;
+            border: none;
+            width: 100%;
+            &>*{
+                flex: 1;
+            }
+        }
+        input, textarea{
+            margin: $gutter;
+            height: 2rem;
+            margin-bottom: 0;
+
+            background: lighten($sideNavBg, 20);
+            border: none;
+            border-radius: 5px;
+            padding: $gutter / 2;
+            width: 95%;
+            color: whitesmoke;
+            &:-ms-input-placeholder{ // IEEEEEEEEEEEEEE
+                color:$sideNavBg;
+            }
+            &::placeholder{
+                color:$sideNavBg;
+            }
+            
+        }
+        textarea{
+            height: 10rem;
+        }
+        #submitButton{
+            display: block;
+            flex: 1;
+            width: auto;
+            height: auto;
+            padding: $gutter;
+            background: none;
+            border: $accentColor 3px solid;
+            color: $accentColor;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: background-color 200ms, border-color 200ms, color 200ms;
+            &:hover{
+                background: $accentColor;
+                border: whitesmoke 3px solid;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .backToTopButton{
+        position: absolute;
+        bottom: $gutter;
+        left: 50%;
+        transform: translateX(-50%);
+        animation-name: scrollDownBounce;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+
+        a{
+            color: $accentColor;
+            text-decoration: none;
+        }
+    }
+
+}
+
+@keyframes scrollUpBounce {
+    0%{
+        bottom:1rem;
+    }
+
+    100%{
+        bottom: 2rem;
+    }
+    
+}
