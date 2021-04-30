@@ -8,20 +8,22 @@
 body {
   background: #333;
   font-family: "Roboto", sans-serif;
+  width: 100vw;
+  max-width: 100%;
 }
 
 .pageContainer {
   position: absolute;
   display: block;
   left: 250px;
-  width: calc(100vw - 250px);
-  background: blue;
+  width: calc(100% - 250px);
   z-index: -1000;
   text-align: center;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 850px) {
   .pageContainer {
-    width: 100vw;
+    width: 100%;
     left: 0;
   }
 }
@@ -217,6 +219,130 @@ header .scrollDownPopup a {
   100% {
     bottom: 2rem;
   }
+}
+.projectHolder {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+.projectHolder .projectCard {
+  flex: 1;
+  margin: 1rem;
+  background: #555;
+  border-radius: 5px;
+  min-width: 30%;
+  max-width: 100%;
+  text-align: left;
+  color: whitesmoke;
+  -webkit-box-shadow: 5px 5px 20px 2px #000000;
+  box-shadow: 5px 5px 20px 2px #000000;
+}
+.projectHolder .projectCard .textHolder {
+  padding: 1rem;
+  word-break: initial;
+}
+.projectHolder .projectCard .imgHolder {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 100ms;
+  position: relative;
+  overflow: hidden;
+  height: 12rem;
+}
+.projectHolder .projectCard .imgHolder::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  top: 0;
+  transition: opacity 300ms;
+}
+.projectHolder .projectCard .imgHolder:hover {
+  transform: scale(1.05);
+}
+.projectHolder .projectCard .imgHolder:hover::after {
+  opacity: 0.3;
+}
+.projectHolder .projectCard img {
+  min-width: 100%;
+  height: 12rem;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+@media screen and (max-width: 670px) {
+  .projectHolder .projectCard {
+    min-width: 80%;
+  }
+}
+.projectHolder h4:hover {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#projectPopupHolder {
+  position: fixed;
+  background: #6f6f6f;
+  z-index: 1000;
+  top: -50%;
+  left: calc(250px + ((100% - 250px) / 2));
+  transform: translateY(-50%) translateX(-50%);
+  width: 50%;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 5px;
+  border: solid 3px #64c864;
+  transition: top 300ms;
+}
+#projectPopupHolder .closeButton {
+  position: absolute;
+  background: tomato;
+  padding: 0.3333333333rem;
+  font-size: 3rem;
+  width: 4rem;
+  text-align: center;
+  right: 0;
+  padding-bottom: 0.6666666667rem;
+  opacity: 0.5;
+}
+#projectPopupHolder .closeButton:hover {
+  cursor: pointer;
+}
+#projectPopupHolder img {
+  width: 100%;
+}
+#projectPopupHolder .TextHolder, #projectPopupHolder .LinkHolder {
+  padding: 1rem;
+  padding-bottom: 0;
+  color: whitesmoke;
+}
+#projectPopupHolder a {
+  color: #64c864;
+}
+#projectPopupHolder a:hover {
+  color: #41b841;
+}
+#projectPopupHolder .LinkHolder {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.showPopup {
+  top: 50% !important;
+}
+
+.projDNone {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

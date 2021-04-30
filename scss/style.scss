@@ -16,23 +16,27 @@ $accentColor: #64c864;
 body{
     background: $backgroundColor;
     font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .pageContainer{
     position: absolute;
     display: block;
     left: 250px;
-    width: calc(100vw - 250px);
-    background: blue;
+    width: calc(100% - 250px);
     z-index: -1000;
     text-align: center;
     @media screen and (max-width:850px){
-        width: 100vw;
+        width: 100%;
         left:0;
     }
+    overflow-x: hidden;
 }
 
 
 
 @import '_sideNav.scss',
-'_header.scss'
+'_header.scss',
+'_projects.scss',
+'_projectPopup.scss'
