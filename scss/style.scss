@@ -18,6 +18,21 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.pageContainer{
+    position: absolute;
+    display: block;
+    left: 250px;
+    width: calc(100vw - 250px);
+    background: blue;
+    z-index: -1000;
+    text-align: center;
+    @media screen and (max-width:850px){
+        width: 100vw;
+        left:0;
+    }
+}
 
 
-@import '_sideNav.scss'
+
+@import '_sideNav.scss',
+'_header.scss'

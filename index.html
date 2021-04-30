@@ -52,15 +52,29 @@
     <script>
         const sideNav = document.getElementById("sideNav");
         const sideButton = document.getElementById("popoutButton");
+        const pageContainer = document.getElementById("pageContainer");
         sideButton.onclick = function(){
             sideButton.classList.toggle("expanded");
             sideButton.classList.toggle("closed");
             sideNav.classList.toggle("sideNavHide");
+            pageContainer.classList.toggle("pageContClosed")
         };
     </script>
 
-    <div class="pageContainer">
-
+    <div class="pageContainer pageContClosed" id="pageContainer">
+        <header>
+            <div class="mainTextHolder">
+                <h1>My Name is Trafford Fewster</h1>
+                <h4>I'm a Web Developer</h4>
+            </div>
+            <div class="scrollDownPopup">
+                <a href="#">
+                    <p>Scroll Down</p>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </header>
     </div>
+
 </body>
 </html>
