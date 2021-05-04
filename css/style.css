@@ -184,9 +184,6 @@ header .mainTextHolder {
   padding: 1rem;
   border-radius: 5px;
 }
-header .mainTextHolder h1 {
-  margin-bottom: 1rem;
-}
 header .scrollDownPopup {
   display: block;
   max-width: 30rem;
@@ -452,40 +449,19 @@ footer .backToTopButton a {
     bottom: 2rem;
   }
 }
-.scsPage .awardPicHolder {
-  background: #1a1a1a;
+.scsPage h1, .scsPage h2 {
+  color: whitesmoke;
 }
-.scsPage .awardPicHolder img {
-  width: 100%;
-  max-width: 1000px;
-  display: block;
-  margin: auto;
-}
-.scsPage h1 {
-  margin-top: 1rem;
-  color: #64c864;
-}
-.scsPage h1 a {
-  color: #64c864;
+.scsPage h1 a, .scsPage h2 a {
+  color: whitesmoke;
   transition: color 200ms;
 }
-.scsPage h1 a:hover {
-  color: #41b841;
+.scsPage h1 a:hover, .scsPage h2 a:hover {
+  color: gainsboro;
 }
-.scsPage .colHolder {
-  display: flex;
-  padding: 1rem;
-  color: whitesmoke;
-  flex-wrap: wrap;
-}
-.scsPage .colHolder .col {
-  width: 33.3333333333%;
-  padding: 1rem;
-}
-@media screen and (max-width: 900px) {
-  .scsPage .colHolder .col {
-    width: 100%;
-  }
+.scsPage h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 .scsPage .aboutNM ul {
   padding-top: 1rem;
@@ -528,6 +504,26 @@ footer .backToTopButton a {
 .scsPage .treehouse .treeHouseTable td, .scsPage .treehouse .treeHouseTable th {
   border-top: 1px solid whitesmoke;
   padding: 0.3333333333rem;
+}
+
+.colHolder {
+  display: flex;
+  padding: 1rem;
+  color: whitesmoke;
+  flex-wrap: wrap;
+}
+.colHolder .col {
+  width: 33.3333333333%;
+  padding: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .colHolder .col {
+    width: 100%;
+  }
+}
+
+.abtMeCols p {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

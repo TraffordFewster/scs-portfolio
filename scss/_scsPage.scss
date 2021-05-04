@@ -1,36 +1,17 @@
 .scsPage{
-    .awardPicHolder{
-        img{
-            width: 100%;
-            max-width: 1000px;
-            display: block;
-            margin: auto;
-        }
-        background: darken($backgroundColor,10);
-    }
-    h1{
-        margin-top: $gutter;
-        color: $accentColor;
+    h1,h2{
+        color: whitesmoke;
         a{
-            color: $accentColor;
+            color: whitesmoke;
             transition: color 200ms;
             &:hover{
-                color: darken($accentColor, 10)
+                color: darken(whitesmoke, 10)
             } 
         }
     }
-    .colHolder{
-        display: flex;
-        padding: $gutter;
-        color: whitesmoke;
-        flex-wrap: wrap;
-        .col{
-            width: 33.333333333333333%;
-            padding: $gutter;
-            @media screen and (max-width:900px){
-                width: 100%;
-            }
-        }
+    h2{
+        margin-top: $gutter;
+        font-size: 2rem;
     }
 
     .aboutNM{
@@ -80,6 +61,20 @@
                 border-top: 1px solid whitesmoke;
                 padding: $gutter/3;
             }
+        }
+    }
+}
+
+.colHolder{
+    display: flex;
+    padding: $gutter;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    .col{
+        width: 33.333333333333333%;
+        padding: $gutter;
+        @media screen and (max-width:900px){
+            width: 100%;
         }
     }
 }
