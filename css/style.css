@@ -169,6 +169,7 @@ header {
   animation-duration: 200s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
   color: whitesmoke;
   position: relative;
 }
@@ -199,6 +200,7 @@ header .scrollDownPopup {
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
   padding: 0.3333333333rem;
   border-radius: 5px;
 }
@@ -323,7 +325,6 @@ header .scrollDownPopup a {
   width: 4rem;
   text-align: center;
   right: 0;
-  padding-bottom: 0.6666666667rem;
   opacity: 0.5;
 }
 #projectPopupHolder .closeButton:hover {
@@ -436,6 +437,7 @@ footer .backToTopButton {
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 footer .backToTopButton a {
   color: #64c864;
@@ -449,6 +451,83 @@ footer .backToTopButton a {
   100% {
     bottom: 2rem;
   }
+}
+.scsPage .awardPicHolder {
+  background: #1a1a1a;
+}
+.scsPage .awardPicHolder img {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+.scsPage h1 {
+  margin-top: 1rem;
+  color: #64c864;
+}
+.scsPage h1 a {
+  color: #64c864;
+  transition: color 200ms;
+}
+.scsPage h1 a:hover {
+  color: #41b841;
+}
+.scsPage .colHolder {
+  display: flex;
+  padding: 1rem;
+  color: whitesmoke;
+  flex-wrap: wrap;
+}
+.scsPage .colHolder .col {
+  width: 33.3333333333%;
+  padding: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .scsPage .colHolder .col {
+    width: 100%;
+  }
+}
+.scsPage .aboutNM ul {
+  padding-top: 1rem;
+  text-align: left;
+}
+.scsPage .introSCS p {
+  margin-top: 1rem;
+  text-align: left;
+}
+.scsPage .treehouse p {
+  margin-top: 1rem;
+  text-align: left;
+}
+.scsPage .treehouse h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.scsPage .treehouse h4 a {
+  color: whitesmoke;
+  transition: color 200ms;
+}
+.scsPage .treehouse h4 a:hover {
+  color: gainsboro;
+}
+.scsPage .treehouse .treeHouseTable {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
+  border: 1px solid whitesmoke;
+  border-collapse: collapse;
+}
+.scsPage .treehouse .treeHouseTable th {
+  font-weight: 500;
+  background: #404040;
+}
+.scsPage .treehouse .treeHouseTable .textCent {
+  text-align: center;
+}
+.scsPage .treehouse .treeHouseTable td, .scsPage .treehouse .treeHouseTable th {
+  border-top: 1px solid whitesmoke;
+  padding: 0.3333333333rem;
 }
 
 /*# sourceMappingURL=style.css.map */

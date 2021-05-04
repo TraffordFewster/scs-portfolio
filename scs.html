@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCS Scheme</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- My CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sideNav sideNavHide" id="sideNav">
+        <div id="popoutButton" class="popoutButton closed">
+            <span class="defaultT">T</span>
+            <span class="rightArrow fas fa-arrow-circle-right"></span>
+            <span class="leftArrow fas fa-arrow-circle-left"></span>
+        </div>
+        <div class="Initials">
+            <a href="/"><h1>T</h1></a>
+        </div>
+        <nav class="NavLinks">
+            <ul>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">My Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Coding Examples</a>
+                </li>
+                <li>
+                    <a href="#">SCS Scheme</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="ContactMeButton">
+            <a href="/#contact">
+                Contact Me
+            </a>
+        </div>
+        <div class="SocialMedia">
+            <ul>
+                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script to handle sideNav Slide -->
+    <script>
+        const sideNav = document.getElementById("sideNav");
+        const sideButton = document.getElementById("popoutButton");
+        const pageContainer = document.getElementById("pageContainer");
+        sideButton.onclick = function(){
+            sideButton.classList.toggle("expanded");
+            sideButton.classList.toggle("closed");
+            sideNav.classList.toggle("sideNavHide");
+            pageContainer.classList.toggle("pageContClosed")
+        };
+    </script>
+
+    <div class="pageContainer pageContClosed" id="pageContainer">
+        <div class="scsPage">
+            <div class="awardPicHolder">
+                <img src="/img/netmatters-announced-as-8Gkd.jpg" alt="Netmatters award picture">
+            </div>
+            <h1><a href="https://www.netmatters.co.uk/">Netmatters</a> SCS Scheme</h1>
+        
+            <div class="colHolder">
+                <div class="col introSCS">
+                    <h2>Introduction to Scion Coalition Scheme</h2>
+                    <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
+                </div>
+                <div class="col treehouse">
+                    <h2>Treehouse</h2>
+                    <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress and see how much they?ve covered in certain areas.</p>
+                    <h4><a href="https://teamtreehouse.com/traffordfewster2">Total Scores</a></h4>
+                    <table id="treeHouseTable" class="treeHouseTable">
+                        <tr>
+                            <th>Skill</th>
+                            <th class='textCent'>Points</th>
+                        </tr>
+                    </table>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script>
+                        const table = document.getElementById("treeHouseTable")
+                        const url = "https://teamtreehouse.com/traffordfewster2.json"
+                        $.getJSON( url , function(data) {
+                            console.log(data.points)
+                            for (var k in data.points){
+                                var amount = data.points[k]
+                                if (amount > 0  && k != "total"){
+                                    table.innerHTML +=
+                                    "<tr><td>"+ k +"</td><td class='textCent'>"+ amount +"</td></tr>"
+                                }
+                            }
+                            table.innerHTML +=
+                                "<tr><td>"+ "<strong>Total</strong>" +"</td><td class='textCent'><strong>"+ data.points["total"] +"</strong></td></tr>"
+                        })
+                    </script>
+                </div>
+                <div class="col aboutNM">
+                    <h2>About Netmatters</h2>
+                    <ul>
+                        <li>Established in 2008</li>
+                        <li>Norfolk's leading technology company</li>
+                        <li>Winner of the Princess Royal Training Award</li>
+                        <li>Winner of EDP Skills of Tomorrow Award</li>
+                        <li>80+ staff, 2 locations across Norfolk</li>
+                        <li>Digital Marketing, Website & Software development & IT Support</li>
+                        <li>Broad spectrum of clients, working nationwide</li>
+                        <li>Operate to strict company values</li>
+                    </ul> 
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
