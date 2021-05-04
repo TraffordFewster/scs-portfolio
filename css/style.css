@@ -16,6 +16,10 @@ body {
   max-width: 100%;
 }
 
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
 .pageContainer {
   position: absolute;
   display: block;
@@ -102,11 +106,16 @@ body {
   text-decoration: none;
   color: #64c864;
 }
+@media screen and (max-height: 570px) {
+  .sideNav .Initials {
+    display: none;
+  }
+}
 .sideNav .NavLinks {
   text-align: center;
 }
 .sideNav .NavLinks li {
-  padding: 1rem 0;
+  padding: 2vh 0;
   font-size: 1.5rem;
 }
 .sideNav .NavLinks li a {
@@ -264,11 +273,19 @@ header .scrollDownPopup a {
   top: 0;
   transition: opacity 300ms;
 }
-.projectHolder .projectCard .imgHolder:hover {
+@media screen and (max-width: 670px) {
+  .projectHolder .projectCard .imgHolder {
+    height: 20rem;
+  }
+}
+.projectHolder .projectCard:hover .imgHolder {
   transform: scale(1.05);
 }
-.projectHolder .projectCard .imgHolder:hover::after {
+.projectHolder .projectCard:hover .imgHolder::after {
   opacity: 0.3;
+}
+.projectHolder .projectCard:hover {
+  cursor: pointer;
 }
 .projectHolder .projectCard img {
   min-width: 100%;
@@ -283,6 +300,11 @@ header .scrollDownPopup a {
   margin: auto;
 }
 @media screen and (max-width: 670px) {
+  .projectHolder .projectCard img {
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 670px) {
   .projectHolder .projectCard {
     min-width: 80%;
   }
@@ -290,16 +312,12 @@ header .scrollDownPopup a {
 .projectHolder h4 {
   margin-top: 1rem;
 }
-.projectHolder h4:hover {
-  display: inline-block;
-  cursor: pointer;
-}
 
 #projectPopupHolder {
   position: fixed;
   background: #6f6f6f;
   z-index: 1000;
-  top: -50%;
+  top: -100vh;
   left: calc(250px + ((100% - 250px) / 2));
   transform: translateY(-50%) translateX(-50%);
   width: 50%;
@@ -359,14 +377,15 @@ footer {
   display: flex;
   color: whitesmoke;
   padding-bottom: 5rem;
+  flex-wrap: wrap;
 }
 footer .footLeft, footer .footRight {
   display: block;
   padding: 2rem;
 }
 footer .footLeft {
-  width: 40%;
   text-align: left;
+  width: 40%;
 }
 footer .footLeft p {
   padding: 1rem 0;
@@ -374,13 +393,25 @@ footer .footLeft p {
 footer .footLeft h2 {
   word-break: break-all;
 }
+@media screen and (max-width: 670px) {
+  footer .footLeft {
+    width: 100%;
+  }
+}
 footer .footRight {
-  width: 60%;
   padding: 1rem;
+  width: 60%;
+}
+@media screen and (max-width: 670px) {
+  footer .footRight {
+    margin-top: -3rem;
+    width: 100%;
+  }
 }
 footer .contactForm fieldset {
   display: flex;
   border: none;
+  flex-wrap: wrap;
   width: 100%;
 }
 footer .contactForm fieldset > * {

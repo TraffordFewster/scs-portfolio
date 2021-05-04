@@ -41,15 +41,22 @@
                 top: 0;
                 transition: opacity 300ms;
             }
+            @media screen and (max-width:670px){
+                height: 20rem;
+            }
 
-            &:hover{
-                transform: scale(1.05);
-                &::after{
-                    opacity: .3;
-                }
+        }
+
+        &:hover .imgHolder{
+            transform: scale(1.05);
+            &::after{
+                opacity: .3;
             }
         }
 
+        &:hover{
+            cursor: pointer;
+        }
         img{
             min-width: 100%;
             height: 15rem;
@@ -61,6 +68,9 @@
             left: -9999px;
             right: -9999px;
             margin: auto;
+            @media screen and (max-width:670px){
+                height: 20rem;
+            }
         }
 
         @media screen and (max-width:670px) {
@@ -70,9 +80,5 @@
 
     h4{
         margin-top: $gutter;
-        &:hover{
-            display: inline-block;
-            cursor: pointer;
-        }
     }
 }

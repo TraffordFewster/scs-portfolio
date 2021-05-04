@@ -2,6 +2,7 @@
     background: $sideNavBg;
     position: fixed;
     height: 100vh;
+    //overflow-y: scroll;
     border-right: $accentColor 3px solid;
     width: 250px;
     display: flex;
@@ -76,11 +77,14 @@
             text-decoration: none;
             color: $accentColor;
         }
+        @media screen and (max-height:570px){
+            display: none;
+        }
     }
 
     .NavLinks{
         li{
-            padding: $gutter 0;
+            padding: 2vh 0;
             font-size: 1.5rem;
             a{
                 color:whitesmoke;

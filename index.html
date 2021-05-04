@@ -142,13 +142,13 @@
                 data = projects[data];
                 console.log(data)
                 htmlStr += 
-                    "<div class='projectCard'>" +
+                    "<div class='projectCard'  onclick='projectPopup("+ key +")'>" +
                         "<div class='imgHolder'>"+
                             "<img src='" + data.img + "' alt='" + data.title + " preview image'>"+
                         "</div>"+
                         "<div class='textHolder'>"+
                             "<h1>"+data.title+"</h1>"+
-                            "<h4 onclick='projectPopup("+ key +")'>View Project <i class='fas fa-arrow-right'></i></h4>"+
+                            "<h4>View Project <i class='fas fa-arrow-right'></i></h4>"+
                         "</div>"+
                     "</div>" // Thanks IE for not support multiline strings so fun :)
             }

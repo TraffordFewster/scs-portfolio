@@ -3,6 +3,7 @@ footer{
     display: flex;
     color: whitesmoke;
     padding-bottom: $gutter * 5;
+    flex-wrap: wrap;
 
     .footLeft, .footRight{
         display: block;
@@ -10,29 +11,38 @@ footer{
     }
 
     .footLeft{
-        width: 40%;
         text-align: left;
+        width: 40%;
         p{
             padding: $gutter 0;
         }
         h2{
             word-break: break-all;
         }
+        @media screen and (max-width:670px){
+            width: 100%;
+        }
     }
     .footRight{
-        width: 60%;
         padding: $gutter;
+        width: 60%;
+        @media screen and (max-width:670px){
+            margin-top: -$gutter * 3;
+            width: 100%;
+        }
     }
 
     .contactForm{
         fieldset{
             display: flex;
             border: none;
+            flex-wrap: wrap;
             width: 100%;
             &>*{
                 flex: 1;
             }
         }
+    
         input, textarea{
             margin: $gutter;
             height: 2rem;
