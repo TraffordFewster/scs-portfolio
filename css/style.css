@@ -319,8 +319,8 @@ header .scrollDownPopup a {
   z-index: 1000;
   top: -100vh;
   left: calc(250px + ((100% - 250px) / 2));
-  transform: translateY(-50%) translateX(-50%);
   width: 50%;
+  transform: translateY(-50%) translateX(-50%);
   text-align: left;
   overflow: hidden;
   border-radius: 5px;
@@ -330,6 +330,7 @@ header .scrollDownPopup a {
 @media screen and (max-width: 850px) {
   #projectPopupHolder {
     left: 50%;
+    width: 90%;
   }
 }
 #projectPopupHolder .closeButton {
@@ -416,6 +417,24 @@ footer .contactForm fieldset {
 }
 footer .contactForm fieldset > * {
   flex: 1;
+}
+footer .contactForm #contact_fname {
+  margin-right: 0;
+}
+@media screen and (max-width: 670px) {
+  footer .contactForm #contact_fname {
+    margin-right: 1rem;
+    flex-basis: 100%;
+  }
+}
+footer .contactForm #contact_sname {
+  margin-left: 0;
+}
+@media screen and (max-width: 670px) {
+  footer .contactForm #contact_sname {
+    margin-left: 1rem;
+    flex-basis: 100%;
+  }
 }
 footer .contactForm input, footer .contactForm textarea {
   margin: 1rem;

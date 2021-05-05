@@ -42,6 +42,21 @@ footer{
                 flex: 1;
             }
         }
+        #contact_fname{
+            margin-right: 0;
+            @media screen and (max-width:670px){
+                margin-right: $gutter;
+                flex-basis: 100%;
+            }
+        }
+
+        #contact_sname{
+            margin-left: 0;
+            @media screen and (max-width:670px){
+                margin-left: $gutter;
+                flex-basis: 100%;
+            }
+        }
     
         input, textarea{
             margin: $gutter;

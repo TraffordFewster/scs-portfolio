@@ -4,11 +4,12 @@
     z-index: 1000;
     top: -100vh;
     left: calc(250px + ((100% - 250px) / 2));
+    width: 50%;
     @media screen and (max-width:850px){
         left: 50%;
+        width: 90%;
     }
     transform: translateY(-50%) translateX(-50%);
-    width: 50%;
     text-align: left;
     overflow: hidden;
     border-radius: 5px;
