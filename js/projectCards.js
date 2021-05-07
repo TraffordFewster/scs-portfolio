@@ -45,7 +45,6 @@ const projects = [
     },
 ];
 var htmlStr = ""
-console.log(projects)
 for (var data in projects){
     var key = data;
     data = projects[data];
@@ -70,7 +69,6 @@ const projLink = document.getElementById("projPopupLinkIcon");
 const projClose = document.getElementById("projPopupClose");
 function projectPopup(dataKey){
     var data = projects[dataKey];
-    console.log(projH.classList);
     projH.classList.add("showPopup");
     projImage.src = data.img;
     projTitle.innerText = data.title;
