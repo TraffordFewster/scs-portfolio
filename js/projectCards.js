@@ -6,7 +6,7 @@ const projects = [
         desc: "One of the first projects in the <a href='/scs.html'>Netmatters SCS Scheme</a> was to recreate the netmatters homepage to test what we had learnt in the <a href='https://teamtreehouse.com/'>Team Treehouse courses</a>.",
         img: "img/xq612.png",
         github: "https://github.com/TraffordFewster/HTML---CSS-Reflection",
-        link: "https://traffordfewster.github.io/HTML---CSS-Reflection/index.html"
+        link: "https://netmatters.trafford-fewster.netmatters-scs.co.uk"
     },
     {
         title: "Placeholder",

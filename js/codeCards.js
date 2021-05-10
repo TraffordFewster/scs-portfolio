@@ -6,7 +6,7 @@ const projects = [
         desc: "One of the issues I had when creating the <a href='https://www.netmatters.co.uk/'>Netmatters</a> home page was the clients going from greyscale to coloured at first I tried to just use CSS filters but that wouldn't work as we needed it to work as <a href='https://caniuse.com/?search=filter'>Internet Explorer does not support filters</a> so I ended up having to use two different images and swap them in and out.",
         img: "img/codeExamples/udido.png",
         github: "https://github.com/TraffordFewster/HTML---CSS-Reflection/blob/master/scss/content/_client-footer.scss#L6",
-        link: "https://traffordfewster.github.io/HTML---CSS-Reflection/index.html"
+        link: "https://netmatters.trafford-fewster.netmatters-scs.co.uk"
     },
     {
         title: "Placeholder",
