@@ -583,7 +583,7 @@ footer .backToTopButton a {
   max-height: 400px;
   overflow-y: scroll;
   box-sizing: content-box;
-  width: calc(100% + 16px);
+  width: calc(100% + 18px);
 }
 
 .projectHolder .codeCard .imgHolder {
