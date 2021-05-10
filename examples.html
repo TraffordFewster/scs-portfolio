@@ -16,6 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <!-- Animate Typing -->
     <script src="js/animateTyping.js" defer></script>
+    <!-- Project Cards -->
+    <script src="js/codeCards.js" defer></script>
 </head>
 <body>
     <div class="sideNav sideNavHide" id="sideNav">
@@ -59,15 +61,32 @@
     <div class="pageContainer pageContClosed" id="pageContainer">
         <header>
             <div class="mainTextHolder">
-                <h1 class="animateText">Coming Soon</h1>
+                <h1 class="animateText">More Coming Soon</h1>
             </div>
-            <!-- <div class="scrollDownPopup"> -->
-                <!-- <a href="#scrDown"> -->
-                    <!-- <p>Scroll Down</p> -->
-                    <!-- <i class="fas fa-chevron-down"></i> -->
-                <!-- </a> -->
-            <!-- </div> -->
+            <div class="scrollDownPopup">
+                <a href="#scrDown">
+                    <p>Scroll Down</p>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
         </header>
+        <div id="projectPopupHolder" class="codePopup">
+            <div class="closeButton" id="projPopupClose"><i class="fas fa-times"></i></div>
+            <div class="imgHolder">
+                <img src="img/projPlaceholder.jpg" alt="Placeholder image" id="projPopupImg">
+            </div>
+            <div class="TextHolder">
+                <h1 id="projPopupTitle" class="title">PLACEHOLDER_TITLE</h1>
+                <p id="projPopupDesc">PLACEHOLDER_DESC</p>
+            </div>
+            <div class="LinkHolder">
+                <a id="projPopupGithubIcon" href="#"><i class="fab fa-github"></i></a>
+                <a id="projPopupLinkIcon" href="#"><i class="fas fa-link"></i></a>
+            </div>
+        </div>
+
+        <main id="projectHolder" class="projectHolder">
+        </main>
     </div>
 </body>
 </html>
