@@ -2,7 +2,7 @@
 $(".animateText").each( function(i,e) {
     let currentText = $(e).text();
     let count = 0;
-    let speed = $(e).attr("data-typing-speed") || 100;
+    let speed = $(e).attr("data-typing-speed") || 50;
     let delay = $(e).attr("data-typing-delay") || 0;
 
     $(e).text("")
