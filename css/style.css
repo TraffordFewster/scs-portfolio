@@ -349,6 +349,19 @@ header .scrollDownPopup a {
 #projectPopupHolder img {
   width: 100%;
 }
+#projectPopupHolder .imgHolder {
+  overflow: hidden;
+}
+@media screen and (max-height: 600px) {
+  #projectPopupHolder .imgHolder {
+    max-height: 200px;
+  }
+}
+@media screen and (max-height: 400px) {
+  #projectPopupHolder .imgHolder {
+    max-height: 100px;
+  }
+}
 #projectPopupHolder .TextHolder, #projectPopupHolder .LinkHolder {
   padding: 1rem;
   padding-bottom: 0;
@@ -581,9 +594,19 @@ footer .backToTopButton a {
 }
 .codePopup .imgHolder {
   max-height: 400px;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
   box-sizing: content-box;
   width: calc(100% + 18px);
+}
+@media screen and (max-height: 600px) {
+  .codePopup .imgHolder {
+    max-height: 200px;
+  }
+}
+@media screen and (max-height: 400px) {
+  .codePopup .imgHolder {
+    max-height: 100px;
+  }
 }
 
 .projectHolder .codeCard .imgHolder {
