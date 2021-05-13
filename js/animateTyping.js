@@ -1,5 +1,5 @@
 
-$(".animateText").each( function(i,e) {
+$(".animateText").each( (i,e) => {
     let currentText = $(e).text();
     let count = 0;
     let speed = $(e).attr("data-typing-speed") || 50;

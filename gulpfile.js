@@ -1,6 +1,7 @@
-var gulp = require('gulp')
-var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
+const gulp = require('gulp')
+const sass = require('gulp-sass');
+const uglifycss = require('gulp-uglifycss');
+const babel = require('gulp-babel')
  
 sass.compiler = require('node-sass');
  
@@ -18,11 +19,21 @@ gulp.task('css', function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('run', gulp.parallel("sass", "css"));
+gulp.task('es6', () => {
+  return gulp.src("js/*.js")
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('run', gulp.parallel("sass", "css", "es6"));
 
 gulp.task('watch', function() {
     gulp.watch('./scss/*.scss', gulp.parallel('sass'));
     gulp.watch('./css/*.css', gulp.parallel('css'));
+    gulp.watch("js/*.js", gulp.parallel('es6'));
 });
+
 
 gulp.task('default', gulp.parallel("run", "watch"));
