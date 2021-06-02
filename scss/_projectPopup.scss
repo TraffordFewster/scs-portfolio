@@ -1,69 +1,69 @@
-#projectPopupHolder{
-    position: fixed;
-    background: lighten($sideNavBg,10);
-    z-index: 1000;
-    top: -100vh;
-    left: calc(250px + ((100% - 250px) / 2));
-    width: 50%;
-    @media screen and (max-width:850px){
-        left: 50%;
-        width: 90%;
-    }
-    transform: translateY(-50%) translateX(-50%);
-    text-align: left;
-    overflow: hidden;
-    border-radius: 5px;
-    border: solid 3px $accentColor;
-    transition: top 300ms;
-    .closeButton{
-        position: absolute;
-        background: tomato;
-        padding: $gutter / 3;
-        font-size: 3rem;
-        width: 4rem;
-        text-align: center;
-        right: 0;
-        opacity: .5;
-        &:hover{
-            cursor: pointer;
-        }
-    }
-    img{
-        width: 100%;
-    }
-    .imgHolder{
-        @media screen and (max-height:600px){
-            max-height: 200px;
-        }
-        @media screen and (max-height:400px){
-            max-height: 100px;
-        }
-        overflow: hidden;
-    }
-    .TextHolder, .LinkHolder{
-        padding: $gutter;
-        padding-bottom: 0;
-        color: whitesmoke;
-    }
+#projectPopupHolder {
+	position: fixed;
+	background: lighten($sideNavBg, 10);
+	z-index: 1000;
+	top: -100vh;
+	left: calc(250px + ((100% - 250px) / 2));
+	width: 50%;
+	@media screen and (max-width: 850px) {
+		left: 50%;
+		width: 90%;
+	}
+	transform: translateY(-50%) translateX(-50%);
+	text-align: left;
+	overflow: hidden;
+	border-radius: 5px;
+	border: solid 3px $accentColor;
+	transition: top 300ms;
+	.closeButton {
+		position: absolute;
+		background: tomato;
+		padding: $gutter / 3;
+		font-size: 3rem;
+		width: 4rem;
+		text-align: center;
+		right: 0;
+		opacity: 0.5;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 100%;
+	}
+	.imgHolder {
+		@media screen and (max-height: 600px) {
+			max-height: 200px;
+		}
+		@media screen and (max-height: 400px) {
+			max-height: 100px;
+		}
+		overflow: hidden;
+	}
+	.TextHolder,
+	.LinkHolder {
+		padding: $gutter;
+		padding-bottom: 0;
+		color: whitesmoke;
+	}
 
-    a{
-        color: $accentColor;
-        &:hover{
-            color: darken($color: $accentColor, $amount: 10)
-        }
-    }
+	a {
+		color: $accentColor;
+		&:hover {
+			color: darken($color: $accentColor, $amount: 10);
+		}
+	}
 
-    .LinkHolder{
-        font-size: 2rem;
-        padding-bottom: $gutter;
-    }
-
+	.LinkHolder {
+		font-size: 2rem;
+		padding-bottom: $gutter;
+	}
 }
 
-.showPopup{
-    top: 50% !important;
+.showPopup {
+	top: 50% !important;
 }
 
-.projDNone{
-    display: none;
+.projDNone {
+	display: none;
 }

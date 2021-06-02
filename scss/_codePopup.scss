@@ -1,59 +1,95 @@
-.codePopup{
-    overflow: hidden;
-    .imgHolder{
-        max-height: 400px;
-        overflow-y: scroll !important;
-        box-sizing: content-box;
-        width: calc(100% + 18px);
-        //border-radius: 3px;
-        @media screen and (max-height:600px){
-            max-height: 200px;
-        }
-        @media screen and (max-height:400px){
-            max-height: 100px;
-        }
-    }
+.codePopup {
+	overflow: hidden;
+	.imgHolder {
+		max-height: 400px;
+		overflow-y: scroll !important;
+		box-sizing: content-box;
+		width: calc(100% + 18px);
+		//border-radius: 3px;
+		@media screen and (max-height: 800px) {
+			max-height: 200px;
+		}
+		@media screen and (max-width: 800px) {
+			max-height: 200px;
+		}
+
+		@media screen and (max-height: 500px) {
+			max-height: 100px;
+		}
+		@media screen and (max-width: 500px) {
+			max-height: 100px;
+		}
+	}
+
+	.TextHolder {
+		overflow-y: auto;
+		max-height: 800px;
+
+		@media screen and (max-height: 800px) {
+			max-height: 35vh;
+		}
+		@media screen and (max-width: 800px) {
+			max-height: 35vh;
+		}
+
+		@media screen and (max-height: 500px) {
+			max-height: 50vh;
+		}
+		@media screen and (max-width: 500px) {
+			max-height: 50vh;
+		}
+	}
+
+	.LinkHolder {
+		@media screen and (max-width: 500px) {
+			display: none;
+		}
+
+		@media screen and (max-height: 500px) {
+			display: none;
+		}
+	}
 }
 
-.projectHolder .codeCard{
-    .imgHolder{
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-    }
-    img{
-        height: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        position: absolute;
-        z-index: 12;
-        animation-name: UpDown;
-        animation-duration: 30s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-timing-function:ease-in-out;
-    }
+.projectHolder .codeCard {
+	.imgHolder {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+	img {
+		height: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		position: absolute;
+		z-index: 12;
+		animation-name: UpDown;
+		animation-duration: 30s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
 }
 
 @keyframes UpDown {
-    0%{
-        transform: translateY(calc(50% - 8rem));
-    }
-    100%{
-        transform: translateY(calc(-50% + 8rem));
-    }
+	0% {
+		transform: translateY(calc(50% - 8rem));
+	}
+	100% {
+		transform: translateY(calc(-50% + 8rem));
+	}
 }
 
-@media screen and (max-width:670px){
-    @keyframes UpDown {
-        0%{
-            transform: translateY(calc(50% - 10rem));
-        }
-        100%{
-            transform: translateY(calc(-50% + 10rem));
-        }
-    } 
+@media screen and (max-width: 670px) {
+	@keyframes UpDown {
+		0% {
+			transform: translateY(calc(50% - 10rem));
+		}
+		100% {
+			transform: translateY(calc(-50% + 10rem));
+		}
+	}
 }

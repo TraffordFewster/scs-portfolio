@@ -276,7 +276,7 @@ header {
     width: 4rem;
     text-align: center;
     right: 0;
-    opacity: .5; }
+    opacity: 0.5; }
     #projectPopupHolder .closeButton:hover {
       cursor: pointer; }
   #projectPopupHolder img {
@@ -289,7 +289,8 @@ header {
     @media screen and (max-height: 400px) {
       #projectPopupHolder .imgHolder {
         max-height: 100px; } }
-  #projectPopupHolder .TextHolder, #projectPopupHolder .LinkHolder {
+  #projectPopupHolder .TextHolder,
+  #projectPopupHolder .LinkHolder {
     padding: 1rem;
     padding-bottom: 0;
     color: whitesmoke; }
@@ -476,12 +477,39 @@ footer {
     overflow-y: scroll !important;
     box-sizing: content-box;
     width: calc(100% + 18px); }
-    @media screen and (max-height: 600px) {
+    @media screen and (max-height: 800px) {
       .codePopup .imgHolder {
         max-height: 200px; } }
-    @media screen and (max-height: 400px) {
+    @media screen and (max-width: 800px) {
+      .codePopup .imgHolder {
+        max-height: 200px; } }
+    @media screen and (max-height: 500px) {
       .codePopup .imgHolder {
         max-height: 100px; } }
+    @media screen and (max-width: 500px) {
+      .codePopup .imgHolder {
+        max-height: 100px; } }
+  .codePopup .TextHolder {
+    overflow-y: auto;
+    max-height: 800px; }
+    @media screen and (max-height: 800px) {
+      .codePopup .TextHolder {
+        max-height: 35vh; } }
+    @media screen and (max-width: 800px) {
+      .codePopup .TextHolder {
+        max-height: 35vh; } }
+    @media screen and (max-height: 500px) {
+      .codePopup .TextHolder {
+        max-height: 50vh; } }
+    @media screen and (max-width: 500px) {
+      .codePopup .TextHolder {
+        max-height: 50vh; } }
+  @media screen and (max-width: 500px) {
+    .codePopup .LinkHolder {
+      display: none; } }
+  @media screen and (max-height: 500px) {
+    .codePopup .LinkHolder {
+      display: none; } }
 
 .projectHolder .codeCard .imgHolder {
   position: relative;
