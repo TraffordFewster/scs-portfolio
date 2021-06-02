@@ -1,71 +1,82 @@
-header{
-    height: 100vh;
-    width: 100%;
-    background-image: url(../img/headerBG.jpg);
-    //background-size: 800%;
-    background-position: left top;
+header {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../img/headerBG.jpg);
+	//background-size: 800%;
+	background-position: left top;
 
-    animation-name: headerMover;
-    animation-duration: 200s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    color: whitesmoke;
-    position: relative;
+	animation-name: headerMover;
+	animation-duration: 200s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	color: whitesmoke;
+	position: relative;
 
-    .mainTextHolder{
-        display: block;
-        max-width: 30rem;
-        position: absolute;
-        top:50%;left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        background: $sideNavBg;
-        padding: $gutter;
-        border-radius: 5px;
-        //h1{
-        //    margin-bottom: $gutter;
-        //}
-    }
+	.mainTextHolder {
+		display: block;
+		width: 480px;
+		@media screen and (max-width: 850px) {
+			width: 280px;
+		}
+		transition: width 200ms;
+		& > * {
+			display: block;
+		}
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		background: $sideNavBg;
+		padding: $gutter;
+		border-radius: 5px;
+		//h1{
+		//    margin-bottom: $gutter;
+		//}
+	}
 
-    .scrollDownPopup{
-        display: block;
-        max-width: 30rem;
-        position: absolute;
-        bottom:1rem;left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        font-size: 1.5rem;
-        color: $accentColor;
-        animation-name: scrollDownBounce;
-        animation-duration: 1s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        //background: $sideNavBg;
-        padding: $gutter/3;
-        border-radius: 5px;
-        a{
-            color: whitesmoke;
-            text-decoration: none;
-        }
-    }
+	.scrollDownPopup {
+		display: block;
+		max-width: 30rem;
+		@media screen and (max-width: 850px) {
+			max-width: 90%;
+		}
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		font-size: 1.5rem;
+		color: $accentColor;
+		animation-name: scrollDownBounce;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		//background: $sideNavBg;
+		padding: $gutter/3;
+		border-radius: 5px;
+		a {
+			color: whitesmoke;
+			text-decoration: none;
+		}
+	}
 }
 
-@keyframes headerMover{
-    0% {
-        background-position: left top;
-    }
-    100%{
-        background-position: right bottom;
-    }
+@keyframes headerMover {
+	0% {
+		background-position: left top;
+	}
+	100% {
+		background-position: right bottom;
+	}
 }
 
 @keyframes scrollDownBounce {
-    0%{
-        bottom:2rem;
-    }
+	0% {
+		bottom: 2rem;
+	}
 
-    100%{
-        bottom: 1rem;
-    }
-    
+	100% {
+		bottom: 1rem;
+	}
 }

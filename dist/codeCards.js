@@ -77,7 +77,19 @@ function projectPopup(dataKey) {
 }
 
 projClose.onclick = function () {
-  projH.classList.remove('showPopup');
+  if (projH.classList.contains('showPopup')) {
+    projH.classList.remove('showPopup');
+  }
 };
 
+$(document.body).on('click', function (e) {
+  e.stopPropagation();
+  var target = $(e.target);
+
+  if (!target.parents('#projectPopupHolder, #projectPopupHolder *, .projectCard, .projectCard *').length) {
+    if (projH.classList.contains('showPopup')) {
+      projH.classList.remove('showPopup');
+    }
+  }
+});
 projHolder.innerHTML = htmlStr;
