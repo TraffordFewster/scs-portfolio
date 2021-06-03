@@ -9,16 +9,16 @@ var projects = [{
   link: 'https://netmatters.trafford-fewster.netmatters-scs.co.uk'
 }, {
   title: 'SQL Example',
-  desc: 'As part of the <a href="scs.html">SCS Scheme</a> we was tasked with creating an SQL query that includes a subquery with formatted outputs and is sorted by a value. The table I was working with had the structure that can be viewed <a href="misc/sql_pre.html">here</a>. <br><br>So with this structure in mind I set out a goal of selecting all employees who were hired before their manager so I started by selecting what I thought would be some usefull infomation and also formatted the two seperated name columns into one, after selecting I needed to filter it down using a subquery which will output the employee_id if the managers hire_date it greater than the employees hire date.<br><br>After running the query through the <a href="https://www.w3resource.com/sql-exercises/employee-database-exercise/subqueries-exercises-on-employee-database.php#SQLEDITOR">w3resource</a> SQL exercice I got the results which can be viewed <a href="misc/sql_post.html">here</a>',
+  desc: 'As part of the <a href="scs.html">SCS Scheme</a> I was tasked with creating an SQL query that includes a subquery with formatted outputs and is sorted by a value. The table I was working with had the structure that can be viewed <a href="misc/sql_pre.html">here</a>. <br><br>So with this structure in mind I set out a goal of selecting all employees who were hired before their manager so I started by selecting what I thought would be some usefull infomation and also formatted the two seperated name columns into one, after selecting I needed to filter it down using a subquery which will output the employee_id if the managers hire_date it greater than the employees hire date.<br><br>After running the query through the <a href="https://www.w3resource.com/sql-exercises/employee-database-exercise/subqueries-exercises-on-employee-database.php#SQLEDITOR">w3resource</a> SQL exercice I got the results which can be viewed <a href="misc/sql_post.html">here</a>',
   img: 'img/codeExamples/sql.png',
   github: undefined,
   link: 'https://www.w3resource.com/sql-exercises/employee-database-exercise/subqueries-exercises-on-employee-database.php#SQLEDITOR'
 }, {
-  title: 'Placeholder',
-  desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, arcu vel tempor luctus, justo ante gravida turpis, sit amet scelerisque dolor erat id ipsum. Etiam a est vel elit semper consectetur non ac diam. Integer turpis sapien, congue sed quam ut, blandit porta risus. Suspendisse urna mi, faucibus at facilisis a, facilisis nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam ex dui, finibus ultrices.',
-  img: 'img/projPlaceholder.jpg',
-  github: 'https://github.com',
-  link: 'https://example.com'
+  title: 'Javascript Example',
+  desc: 'As part of the <a href="scs.html">SCS Scheme</a> I was tasked with creating a basic image assigning tool where the tool would need to reach out to an API to get an image and display it to the user where the user can then assign it to an email. With this system I wanted to make it so that the "Email Containers" were collapsible but I had an issue with it as they were also dynamically sized so I couldn\'t use plain CSS, with this is mind I created this small snippet of code which will get the height it should be and set it so that CSS can actually work out the transitions.',
+  img: 'img/codeExamples/js.png',
+  github: 'https://github.com/TraffordFewster/jsReflection/blob/master/js/app.js#L176',
+  link: 'https://github-projects.trafford.dev/jsReflection/'
 }, {
   title: 'Placeholder',
   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, arcu vel tempor luctus, justo ante gravida turpis, sit amet scelerisque dolor erat id ipsum. Etiam a est vel elit semper consectetur non ac diam. Integer turpis sapien, congue sed quam ut, blandit porta risus. Suspendisse urna mi, faucibus at facilisis a, facilisis nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam ex dui, finibus ultrices.',
