@@ -65,7 +65,7 @@ footer {
 			height: 2rem;
 			margin-bottom: 0;
 
-			background: lighten($sideNavBg, 20);
+			background: lighten($sideNavBg, 15);
 			border: none;
 			border-radius: 5px;
 			padding: $gutter / 2;
@@ -74,10 +74,12 @@ footer {
 			transition: border-color 300ms;
 			&:-ms-input-placeholder {
 				// IEEEEEEEEEEEEEE
-				color: lighten($color: $accentColor, $amount: 20);
+				color: #EAF5F0;
+				opacity: 1 !important;
 			}
 			&::placeholder {
-				color: lighten($color: $accentColor, $amount: 20);
+				color: #D0E2DF;
+				opacity: 1 !important;
 			}
 
 			&:focus {
